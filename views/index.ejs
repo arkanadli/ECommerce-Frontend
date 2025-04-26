@@ -27,3 +27,279 @@
   </footer>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcane Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="#" class="logo">
+        <i class="fas fa-magic"></i>&nbsp;Arcane Store
+      </a>
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Cari produk...">
+        <button class="search-button">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div class="nav-buttons">
+        <button class="nav-button">
+          <i class="fas fa-user"></i>
+          <span>Akun</span>
+        </button>
+        <button class="nav-button">
+          <i class="fas fa-heart"></i>
+          <span>Wishlist</span>
+        </button>
+        <button class="nav-button">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Cart</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  
+  <div class="categories-bar">
+    <div class="categories-container">
+      <a href="#" class="category">
+        <i class="fas fa-mobile-alt"></i>
+        <span>Smartphone</span>
+      </a>
+      <a href="#" class="category">
+        <i class="fas fa-laptop"></i>
+        <span>Laptop</span>
+      </a>
+      <a href="#" class="category">
+        <i class="fas fa-tshirt"></i>
+        <span>Fashion</span>
+      </a>
+      <a href="#" class="category">
+        <i class="fas fa-headphones"></i>
+        <span>Audio</span>
+      </a>
+      <a href="#" class="category">
+        <i class="fas fa-gamepad"></i>
+        <span>Gaming</span>
+      </a>
+      <a href="#" class="category">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="#" class="category">
+        <i class="fas fa-utensils"></i>
+        <span>Kitchen</span>
+      </a>
+      <a href="#" class="category">
+        <i class="fas fa-baby"></i>
+        <span>Kids</span>
+      </a>
+      <a href="#" class="category">
+        <i class="fas fa-dumbbell"></i>
+        <span>Sports</span>
+      </a>
+      <a href="#" class="category">
+        <i class="fas fa-ellipsis-h"></i>
+        <span>More</span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="banner">
+    <div class="banner-content">
+      <h2>Sale Up to 70% Off</h2>
+      <p>Promo special untuk produk pilihan di Arcane Store</p>
+      <a href="#" class="banner-button">Shop Now</a>
+    </div>
+  </div>
+  
+  <main>
+    <div class="section-title">
+      <h2>Produk Unggulan</h2>
+      <a href="#" class="view-all">Lihat Semua</a>
+    </div>
+    
+    <div class="products-container">
+        <% products.forEach(product => { %>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="<%= product.imageUrl %>" alt="<%= product.name %>">
+              <% if (product.discount) { %>
+                <div class="discount-tag">-<%= product.discount %>%</div>
+              <% } %>
+              <button class="wishlist-button">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name"><%= product.name %></h3>
+              <div class="product-store"><%= product.store %></div>
+              <div class="product-price">
+                <% if (product.originalPrice) { %>
+                  <span class="original-price">Rp <%= product.originalPrice.toLocaleString() %></span>
+                <% } %>
+                <span class="current-price">Rp <%= product.price.toLocaleString() %></span>
+              </div>
+              <a href="#" class="buy-button">Beli Sekarang</a>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+      
+
+    <div class="section-title">
+      <h2>Flash Sale</h2>
+      <a href="#" class="view-all">Lihat Semua</a>
+    </div>
+    
+    <div class="products-container">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/api/placeholder/400/400" alt="Blender">
+          <div class="discount-tag">-50%</div>
+          <button class="wishlist-button">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Blender Portable 600W with 2 Cup</h3>
+          <div class="product-store">KitchenPlus</div>
+          <div class="product-price">
+            <span class="original-price">Rp 899.000</span>
+            <span class="current-price">Rp 449.000</span>
+          </div>
+          <a href="#" class="buy-button">Beli Sekarang</a>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/api/placeholder/400/400" alt="Wireless Mouse">
+          <div class="discount-tag">-40%</div>
+          <button class="wishlist-button">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Wireless Mouse Silent Click RGB Lighting</h3>
+          <div class="product-store">TechGadgets</div>
+          <div class="product-price">
+            <span class="original-price">Rp 499.000</span>
+            <span class="current-price">Rp 299.000</span>
+          </div>
+          <a href="#" class="buy-button">Beli Sekarang</a>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/api/placeholder/400/400" alt="Power Bank">
+          <div class="discount-tag">-35%</div>
+          <button class="wishlist-button">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Power Bank 20000mAh Fast Charging</h3>
+          <div class="product-store">PowerUp</div>
+          <div class="product-price">
+            <span class="original-price">Rp 799.000</span>
+            <span class="current-price">Rp 519.000</span>
+          </div>
+          <a href="#" class="buy-button">Beli Sekarang</a>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/api/placeholder/400/400" alt="Smart Light Bulb">
+          <div class="discount-tag">-45%</div>
+          <button class="wishlist-button">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Smart Light Bulb RGB LED Wifi Voice Control</h3>
+          <div class="product-store">SmartHome</div>
+          <div class="product-price">
+            <span class="original-price">Rp 299.000</span>
+            <span class="current-price">Rp 164.000</span>
+          </div>
+          <a href="#" class="buy-button">Beli Sekarang</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Arcane Store</h3>
+        <ul>
+          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="#">Karir</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Corporate</a></li>
+          <li><a href="#">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Layanan Pelanggan</h3>
+        <ul>
+          <li><a href="#">Bantuan</a></li>
+          <li><a href="#">Cara Berbelanja</a></li>
+          <li><a href="#">Pengiriman</a></li>
+          <li><a href="#">Pengembalian</a></li>
+          <li><a href="#">Kontak Kami</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Kategori</h3>
+        <ul>
+          <li><a href="#">Elektronik</a></li>
+          <li><a href="#">Fashion</a></li>
+          <li><a href="#">Kesehatan & Kecantikan</a></li>
+          <li><a href="#">Rumah Tangga</a></li>
+          <li><a href="#">Olahraga & Outdoor</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Metode Pembayaran</h3>
+        <ul>
+          <li><a href="#">Kartu Kredit</a></li>
+          <li><a href="#">Bank Transfer</a></li>
+          <li><a href="#">E-Wallet</a></li>
+          <li><a href="#">Cicilan 0%</a></li>
+          <li><a href="#">COD</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; 2025 Arcane Store. All Rights Reserved.
+      </div>
+      
+      <div class="payment-methods">
+        <img src="/api/placeholder/50/24" alt="Visa">
+        <img src="/api/placeholder/50/24" alt="Mastercard">
+        <img src="/api/placeholder/50/24" alt="GoPay">
+        <img src="/api/placeholder/50/24" alt="OVO">
+        <img src="/api/placeholder/50/24" alt="Dana">
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
