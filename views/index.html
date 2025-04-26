@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko E-Commerce</title>
+  <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Toko E-Commerce</h1>
+  </header>
+  <main>
+    <div class="products-container">
+      <% products.forEach(product => { %>
+        <div class="product-card">
+          <img src="<%= product.imageUrl %>" alt="<%= product.name %>">
+          <h3><%= product.name %></h3>
+          <p class="price">Rp <%= product.price %></p>
+        </div>
+      <% }); %>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Startup E-Commerce</p>
+  </footer>
+</body>
+</html>
