@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arcane Store</title>
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-  <header>
-    <h1>Arcane Store</h1>
-  </header>
-  <main>
-    <div class="products-container">
-      <% products.forEach(product => { %>
-        <div class="product-card">
-          <img src="<%= product.imageUrl %>" alt="<%= product.name %>">
-          <h3><%= product.name %></h3>
-          <p class="price">Rp <%= product.price %></p>
-          <a href="#" class="buy-button">Buy Now</a>
-        </div>
-      <% }); %>
-    </div>
-  </main>
-  <footer>
-    <p>&copy; 2025 Arcane Ecommerce</p>
-  </footer>
-</body>
-</html>
+
 
 <!DOCTYPE html>
 <html lang="id">
@@ -38,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
 
 </head>
 <body>
@@ -156,88 +129,7 @@
       </div>
       
 
-    <div class="section-title">
-      <h2>Flash Sale</h2>
-      <a href="#" class="view-all">Lihat Semua</a>
-    </div>
-    
-    <div class="products-container">
-      <div class="product-card">
-        <div class="product-image">
-          <img src="/api/placeholder/400/400" alt="Blender">
-          <div class="discount-tag">-50%</div>
-          <button class="wishlist-button">
-            <i class="far fa-heart"></i>
-          </button>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Blender Portable 600W with 2 Cup</h3>
-          <div class="product-store">KitchenPlus</div>
-          <div class="product-price">
-            <span class="original-price">Rp 899.000</span>
-            <span class="current-price">Rp 449.000</span>
-          </div>
-          <a href="#" class="buy-button">Beli Sekarang</a>
-        </div>
-      </div>
-      
-      <div class="product-card">
-        <div class="product-image">
-          <img src="/api/placeholder/400/400" alt="Wireless Mouse">
-          <div class="discount-tag">-40%</div>
-          <button class="wishlist-button">
-            <i class="far fa-heart"></i>
-          </button>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Wireless Mouse Silent Click RGB Lighting</h3>
-          <div class="product-store">TechGadgets</div>
-          <div class="product-price">
-            <span class="original-price">Rp 499.000</span>
-            <span class="current-price">Rp 299.000</span>
-          </div>
-          <a href="#" class="buy-button">Beli Sekarang</a>
-        </div>
-      </div>
-      
-      <div class="product-card">
-        <div class="product-image">
-          <img src="/api/placeholder/400/400" alt="Power Bank">
-          <div class="discount-tag">-35%</div>
-          <button class="wishlist-button">
-            <i class="far fa-heart"></i>
-          </button>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Power Bank 20000mAh Fast Charging</h3>
-          <div class="product-store">PowerUp</div>
-          <div class="product-price">
-            <span class="original-price">Rp 799.000</span>
-            <span class="current-price">Rp 519.000</span>
-          </div>
-          <a href="#" class="buy-button">Beli Sekarang</a>
-        </div>
-      </div>
-      
-      <div class="product-card">
-        <div class="product-image">
-          <img src="/api/placeholder/400/400" alt="Smart Light Bulb">
-          <div class="discount-tag">-45%</div>
-          <button class="wishlist-button">
-            <i class="far fa-heart"></i>
-          </button>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Smart Light Bulb RGB LED Wifi Voice Control</h3>
-          <div class="product-store">SmartHome</div>
-          <div class="product-price">
-            <span class="original-price">Rp 299.000</span>
-            <span class="current-price">Rp 164.000</span>
-          </div>
-          <a href="#" class="buy-button">Beli Sekarang</a>
-        </div>
-      </div>
-    </div>
+   
   </main>
   
   <footer>
@@ -292,13 +184,6 @@
         &copy; 2025 Arcane Store. All Rights Reserved.
       </div>
       
-      <div class="payment-methods">
-        <img src="/api/placeholder/50/24" alt="Visa">
-        <img src="/api/placeholder/50/24" alt="Mastercard">
-        <img src="/api/placeholder/50/24" alt="GoPay">
-        <img src="/api/placeholder/50/24" alt="OVO">
-        <img src="/api/placeholder/50/24" alt="Dana">
-      </div>
     </div>
   </footer>
 </body>
