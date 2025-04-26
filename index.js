@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 
 // Endpoint API backend
-const backendUrl = 'http://[ip-private-backend]:3000';
+const backendUrl = 'http://10.0.2.231:3000';
 
 app.get('/', async (req, res) => {
     try {
